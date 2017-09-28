@@ -3,9 +3,13 @@ using System.Text;
 
 namespace SoftUniJudgeSolutions
 {
-    internal class ChooseADrink
+    internal class ChooseADrink2
     {
+        private const string FORMAT_ANSWER = "The {0} has to pay {1:0.00}.";
         private static readonly string[] DrinkNames = { "Water", "Coffee", "Beer", "Tea" };
+        private static readonly double[] DrinkPrices = { 0.70f, 1.00f, 1.70f, 1.20f};
+
+        private static int drinkQuantity;
         private static string professionName;
 
         /// <summary>
@@ -13,7 +17,14 @@ namespace SoftUniJudgeSolutions
         /// This noticeably improves the execution times.
         /// </summary>
         private static StringBuilder result = new StringBuilder();
-                
+
+        private static double CalcTotalPrice(string drinkName, int drinkQuantity)
+        {
+            double singleDrinkPrice = GetPriceForDrink(drinkName);
+            return ((double)drinkQuantity) * singleDrinkPrice;
+
+        }
+
         private static int FindDrinkIdxByProfession(string profession)
         {
             switch (profession)
@@ -33,6 +44,24 @@ namespace SoftUniJudgeSolutions
             }
         }
 
+        private static string FindDrinkNameByProfession(string profession)
+        {
+            return DrinkNames[FindDrinkIdxByProfession(profession)];
+        }
+
+        private static double GetPriceForDrink(string drinkName)
+        {
+            int drinkIndex = Array.IndexOf(DrinkNames, drinkName);
+            return DrinkPrices[drinkIndex];
+        }
+
+        private static void Main(string[] args)
+        {
+            ReadInput();
+            Solve();
+            PrintResult();
+        }
+
         /// <summary>
         /// Prints the collected output when solving has completed.
         /// </summary>
@@ -49,12 +78,16 @@ namespace SoftUniJudgeSolutions
         private static void ReadInput()
         {
             professionName = Console.ReadLine();
+            drinkQuantity = int.Parse(Console.ReadLine().Trim());
         }
 
         private static void Solve()
         {
-            int drinkIdx = FindDrinkIdxByProfession(professionName);
-            result.Append(DrinkNames[drinkIdx]);
+            string drinkName = FindDrinkNameByProfession(professionName);
+
+            double totalPrice = CalcTotalPrice(drinkName, drinkQuantity);
+            
+            result.AppendFormat(FORMAT_ANSWER, professionName, totalPrice);
         }
     }
 }
