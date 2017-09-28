@@ -69,12 +69,7 @@ namespace PFE.CondStmtsNLoops.Exercise04
             return nightsCount > BonusNight_MinNightsCount && (Array.IndexOf(BonusNight_Months, monthName) >= 0);
         }
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+      
 
         private static void PrintResult()
         {
