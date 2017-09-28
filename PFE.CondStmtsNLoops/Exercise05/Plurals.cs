@@ -3,19 +3,14 @@ using System.Text;
 
 namespace SoftUniJudgeSolutions
 {
-    internal class ExerciseSolution
+    internal class Plurals
     {
         private static readonly string[] REPLACED_WITH_ES = { "o", "ch", "z", "x", "s", "sh" };
         private static StringBuilder result = new StringBuilder();
 
         private static string word;
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+       
 
    
         private static void PrintResult()
