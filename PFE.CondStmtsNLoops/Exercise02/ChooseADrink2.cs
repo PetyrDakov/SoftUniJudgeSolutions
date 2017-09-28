@@ -55,12 +55,7 @@ namespace SoftUniJudgeSolutions
             return DrinkPrices[drinkIndex];
         }
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+        
 
         /// <summary>
         /// Prints the collected output when solving has completed.
