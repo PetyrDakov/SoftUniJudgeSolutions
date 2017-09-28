@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace SoftUniJudgeSolutions
@@ -26,27 +27,20 @@ namespace SoftUniJudgeSolutions
 
         private static int GetHallIndexForGroup(int groupSize)
         {
-            if (groupSize <= 0 || groupSize >= 120)
-            {
+           
+            if (groupSize < 1 )
                 return -1;
-            }
-            if (groupSize <= 50)
+            
+            for(int i = 0; i < hallCapacity.Length; i++)
             {
-                return 0;
+                if (groupSize <= hallCapacity[i])
+                    return i;
             }
-            if (groupSize <= 100)
-            {
-                return 1;
-            }
-            return 2;
+
+            return -1;
         }
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+       
 
         private static void PrintResult()
         {
