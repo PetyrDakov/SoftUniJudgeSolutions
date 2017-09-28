@@ -39,9 +39,7 @@ namespace SoftUniJudgeSolutions
 
             return -1;
         }
-
-       
-
+        
         private static void PrintResult()
         {
             Console.WriteLine(result.ToString());
@@ -94,8 +92,7 @@ namespace SoftUniJudgeSolutions
                 result.AppendLine();
 
                 result.AppendFormat(MSG_PRICE_PER_PERSON, pricePerPerson);
-
-
+                
             }
 
 

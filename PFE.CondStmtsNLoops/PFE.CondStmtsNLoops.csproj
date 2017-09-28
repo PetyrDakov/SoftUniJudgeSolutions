@@ -45,6 +45,7 @@
     <Compile Include="Exercise01\ChooseADrink.cs" />
     <Compile Include="Exercise02\ChooseADrink2.cs" />
     <Compile Include="Exercise03\RestourantDiscount.cs" />
+    <Compile Include="Exercise04\Hotel.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
