@@ -12,12 +12,7 @@ namespace SoftUniJudgeSolutions
         private static StringBuilder result = new StringBuilder();
         private static int totalAmount = 0;
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+       
 
         private static void PrintResult()
         {
