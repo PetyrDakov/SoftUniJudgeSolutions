@@ -8,12 +8,6 @@ namespace SoftUniJudgeSolutions
         private static int numCount = 0;
         private static StringBuilder result = new StringBuilder();
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
 
         private static void PrintResult()
         {
