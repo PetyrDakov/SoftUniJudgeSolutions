@@ -49,6 +49,7 @@
     <Compile Include="Exercise05\Plurals.cs" />
     <Compile Include="Exercise06\Intervals.cs" />
     <Compile Include="Exercise07\bakingProgram.cs" />
+    <Compile Include="Exercise08\CaloriesCounter.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
