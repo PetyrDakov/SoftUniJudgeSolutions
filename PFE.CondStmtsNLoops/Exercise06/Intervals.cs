@@ -3,6 +3,7 @@ using System.Text;
 
 namespace SoftUniJudgeSolutions
 {
+
  
     internal class Intervals
     {
@@ -11,12 +12,7 @@ namespace SoftUniJudgeSolutions
         private static StringBuilder result = new StringBuilder();
         private static int to;
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+        
 
         private static void PrintResult()
         {
