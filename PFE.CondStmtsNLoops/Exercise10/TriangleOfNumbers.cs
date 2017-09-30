@@ -11,12 +11,7 @@ namespace PFE.CondStmtsNLoops.Exercise10
         private static int input;
         private static StringBuilder result = new StringBuilder();
 
-        private static void Main(string[] args)
-        {
-            ReadInput();
-            Solve();
-            PrintResult();
-        }
+        
 
         private static void PrintResult()
         {

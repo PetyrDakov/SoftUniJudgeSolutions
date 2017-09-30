@@ -52,6 +52,7 @@
     <Compile Include="Exercise08\CaloriesCounter.cs" />
     <Compile Include="Exercise09\CountIntegers.cs" />
     <Compile Include="Exercise10\TriangleOfNumbers.cs" />
+    <Compile Include="Exercise11\DiffrentNumbers.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
